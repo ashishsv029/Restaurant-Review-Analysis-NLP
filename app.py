@@ -9,10 +9,10 @@ import numpy as np
 from flask import Flask,request,jsonify,render_template
 import pickle
 import re
-
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-
+nltk.download('stopwords')
 app=Flask(__name__)
 model=pickle.load(open('restaurant_model.pkl','rb'))
 
