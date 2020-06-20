@@ -47,4 +47,4 @@ def predictor():
 #predictor(["so nice","food is bad"])
     
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
