@@ -9,7 +9,7 @@ import numpy as np
 from flask import Flask,request,jsonify,render_template
 import pickle
 import re
-#import nltk
+import nltk
 
 #from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
