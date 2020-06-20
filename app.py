@@ -10,9 +10,11 @@ from flask import Flask,request,jsonify,render_template
 import pickle
 import re
 import nltk
+
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
-nltk.download('stopwords')
+
 app=Flask(__name__)
 model=pickle.load(open('restaurant_model.pkl','rb'))
 
@@ -35,7 +37,6 @@ def predictor():
     lst=[]
     for i in trail_pred:
         lst.append(int(i))
-    print(lst)
     return jsonify(outputs=lst)
     #return(trail_pred)
 
